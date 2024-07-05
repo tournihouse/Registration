@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="icon" href="logo-removebg-preview.png" type="x-icon">
+    <title>Free Fire Tournament Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            overflow: hidden;
+            background: #000;
+        }
+
+        .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://dl.dir.freefiremobile.com/common/web_event/official2.ff.garena.all/20246/f12ac65d0a2883b63639842a817c47b7.jpg');
+            background-size: cover;
+            filter: blur(8px);
+            z-index: -1;
+        }
+
+        h1 {
+            font-size: 80px;
+            margin-top: 3%;
+            font-family: 'Times New Roman', Times, serif;
+            margin-bottom: 2%;
+            animation: neon 1.5s infinite alternate;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6), 0 0 30px rgba(255, 0, 0, 0.4), 0 0 40px rgba(255, 0, 0, 0.2);
+            -webkit-text-stroke: 1px black;
+        }
+
+        form {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+            animation: fadeIn 2s;
+            z-index: 1;
+            width: 100%;
+            max-width: 600px;
+            box-sizing: border-box;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .player-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 400px;
+            margin: 10px;
+            animation: fadeIn 2s;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 10px 0;
+            width: 100%;
+        }
+
+        label {
+            font-size: 22px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #ffcc00;
+        }
+
+        input[type="text"],
+        input[type="tel"] {
+            width: 100%;
+            padding: 15px;
+            margin: 15px 0;
+            border: none;
+            border-radius: 5px;
+            font-size: 20px;
+        }
+
+        input[type="submit"] {
+            background: #ffcc00;
+            color: #000;
+            border: none;
+            margin-top: 10px;
+            padding: 20px 40px;
+            font-size: 22px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+            width: 100%;
+            max-width: 200px;
+        }
+
+        input[type="submit"]:hover {
+            background: #ff9900;
+        }
+
+        h3 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #ff6600;
+            animation: slideIn 2s forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes neon {
+            0% {
+                text-shadow: 0 0 5px rgba(255, 255, 255, 0.8), 0 0 10px rgba(255, 255, 255, 0.6), 0 0 15px rgba(255, 0, 0, 0.4), 0 0 20px rgba(255, 0, 0, 0.2);
+                color: #ffcc00;
+            }
+            100% {
+                text-shadow: 0 0 20px rgba(255, 255, 255, 1), 0 0 30px rgba(255, 255, 255, 0.8), 0 0 40px rgba(255, 0, 0, 0.6), 0 0 50px rgba(255, 0, 0, 0.4);
+                color: #ff6600;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .logo {
+            width: 100%;
+            max-width: 400px;
+            margin: 10px 0;
+        }
+
+        .icons {
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+        }
+
+        .phone-group {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .phone-group img {
+            margin: 10px;
+        }
+
+        @media (max-width: 600px) {
+            h2 {
+                font-size: 36px;
+            }
+
+            h3 {
+                font-size: 24px;
+            }
+
+            .player-group {
+                width: 100%;
+                margin: 10px 0;
+            }
+
+            .logo {
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .icons {
+                width: 70px;
+                height: 70px;
+            }
+
+            input[type="submit"] {
+                padding: 15px 30px;
+                font-size: 20px;
+                width: 80%;
+            }
+
+            .phone-group {
+                flex-direction: column;
+            }
+
+            .phone-group img {
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="background"></div>
+    <h1>Free Fire Tournament Registration</h1>
+    <form action="https://script.google.com/macros/s/AKfycbxnY5QT-mgDr-F9nq-BRZjggfMj94I_Tif-Qv8NjB-w1FLDN04gHjEhr6iM917Ma_7vZA/exec" name="register-form" method="post">
+        <div class="container">
+            <div class="player-group">
+                <h3>Player 1</h3>
+                <div class="form-group">
+                    <label for="player1">Name:</label>
+                    <input type="text" id="player1" name="player1">
+                    <label for="player1id">FF ID:</label>
+                    <input type="text" id="player1id" name="player1id" required>
+                </div>
+            </div>
+            <div class="player-group">
+                <h3>Player 2</h3>
+                <div class="form-group">
+                    <label for="player2">Name:</label>
+                    <input type="text" id="player2" name="player2" required>
+                    <label for="player2id">FF ID:</label>
+                    <input type="text" id="player2id" name="player2id" required><br><br><br><br>
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+            </div>
+            <img class="logo" src="logo-removebg-preview.png">
+            
+            <div class="phone-group">
+                <a href="https://youtube.com/@tournihouse?si=NwAIEVzN5u_5Vsgz"><img class="icons" src="youtube.webp"></a>&ensp;&ensp;&ensp;&ensp;
+                <a href="https://www.instagram.com/tournihouse?igsh=MWI5aHZ4cmN2Ynd0Yw=="><img class="icons" src="Instagram.png"></a>
+            </div>
+        </div>
+        
+        <input type="submit" value="Register">
+    </form>
+    <audio autoplay loop>
+        <source src="free_fire.mp3" type="audio/mp3">
+    </audio>
+    
+</body>
+<script >
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxnY5QT-mgDr-F9nq-BRZjggfMj94I_Tif-Qv8NjB-w1FLDN04gHjEhr6iM917Ma_7vZA/exec'
+    const form = document.forms['register-form']
+
+    form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+    .then(response => alert("Thank you! your duo is registered for tournament successfully." ))
+    .then(() => { window.location.reload(); })
+    .catch(error => console.error('Error!', error.message))
+    })
+    
+</script>
+</html>
