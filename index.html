@@ -89,6 +89,15 @@
             font-size: 20px;
         }
 
+        select {
+            width: 100%;
+            padding: 15px;
+            margin: 15px 0;
+            border: none;
+            border-radius: 5px;
+            font-size: 20px;
+        }
+
         input[type="submit"] {
             background: #ffcc00;
             color: #000;
@@ -207,12 +216,32 @@
                 margin: 10px 0;
             }
         }
+        .heading{
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #ff6600;
+            animation: slideIn 2s forwards;
+            text-align: center;
+        }
+
+        #popup-window {
+      width: 500px;
+      height: 450px;
+      background: rgb(0, 0, 0);
+      border: 1px solid black;
+      border-radius: 20px;
+      padding: 10px;
+      margin: auto;
+      text-align: left;
+      top: -30;
+      display: none;
+    } 
     </style>
 </head>
 <body>
     <div class="background"></div>
     <h1>Free Fire Tournament Registration</h1>
-    <form action="https://script.google.com/macros/s/AKfycbxnY5QT-mgDr-F9nq-BRZjggfMj94I_Tif-Qv8NjB-w1FLDN04gHjEhr6iM917Ma_7vZA/exec" name="register-form" method="post">
+    <form method="post" name="register-form" action="https://script.google.com/macros/s/AKfycbxnY5QT-mgDr-F9nq-BRZjggfMj94I_Tif-Qv8NjB-w1FLDN04gHjEhr6iM917Ma_7vZA/exec">
         <div class="container">
             <div class="player-group">
                 <h3>Player 1</h3>
@@ -229,27 +258,63 @@
                     <label for="player2">Name:</label>
                     <input type="text" id="player2" name="player2" required>
                     <label for="player2id">FF ID:</label>
-                    <input type="text" id="player2id" name="player2id" required><br><br><br><br>
+                    <input type="text" id="player2id" name="player2id" required>
                     <label for="phone">Phone Number:</label>
                     <input type="tel" id="phone" name="phone" required>
                 </div>
             </div>
+            <div class="player-group">
+                <div class="form-group">
+                    <label for="slot">Select Slot:</label>
+                    <select id="slot" name="slot" required>
+                        <option value="" disabled selected>Select Slot</option>
+                        <option value="slot1">17th June</option>
+                        <option value="slot2">18th June</option>
+                        <option value="slot3">19th June</option>
+                        <option value="slot4">20th June</option>
+                    </select>
+                    <p class="payment">Complete Rs.80 to <b>9704223947</b> & Enter the Transaction ID.</p>
+                    <label for="transactionid">Transaction ID:</label>
+                    <input type="text" id="transactionid" name="transactionid" required>
+                </div>
+            </div>
             <img class="logo" src="logo-removebg-preview.png">
-            
             <div class="phone-group">
                 <a href="https://youtube.com/@tournihouse?si=NwAIEVzN5u_5Vsgz"><img class="icons" src="youtube.webp"></a>&ensp;&ensp;&ensp;&ensp;
                 <a href="https://www.instagram.com/tournihouse?igsh=MWI5aHZ4cmN2Ynd0Yw=="><img class="icons" src="Instagram.png"></a>
             </div>
         </div>
-        
+            <a href="#" id="popup-link">Click here to open pop-up</a>
+            <div id="popup-window">
+            <h1 class="heading">RULES</h1>
+            <p>Hello guys , Thank you for registering to Duo League.<br>
+
+                Here are the some of the rules and process conducting a match:<br>
+                ➡Gun Attributes - No<br>
+                ➡Loadout - No<br>
+                ➡No restrictions on wall breaking and Camping <br>
+                ➡Climbing upstairs in Buildings and houses - No<br>
+                ➡All other Room match options will be included(Character Skill- No , Limited Ammo-No, etc..)<br>
+                ➡Total Rounds - 11<br>
+                Winning Objective - 6<br>
+                ➡STORE - Random Store
+                (If any gun have to included , remind us before starting the match)<br>
+                ➡Vest lvl - 3, Helmet lvl - 2<br>
+                ➡Map - Bermuda<br><br>
+                
+                
+                ‼‼ <b>NOTE</b>: If the gaming of the player looking suspicious,that  player and their teammate will be disqualified. ‼‼.</p>
+            <button id="close-button">Close</button>
+        </div><br>
+        <input type="checkbox" id="rules" name="rules">I have read the rules.<br><br>
         <input type="submit" value="Register">
     </form>
     <audio autoplay loop>
         <source src="free_fire.mp3" type="audio/mp3">
     </audio>
-    
 </body>
-<script >
+<script>
+
     const scriptURL = 'https://script.google.com/macros/s/AKfycbxnY5QT-mgDr-F9nq-BRZjggfMj94I_Tif-Qv8NjB-w1FLDN04gHjEhr6iM917Ma_7vZA/exec'
     const form = document.forms['register-form']
 
@@ -259,7 +324,18 @@
     .then(response => alert("Thank you! your duo is registered for tournament successfully." ))
     .then(() => { window.location.reload(); })
     .catch(error => console.error('Error!', error.message))
-    })
-    
-</script>
+    });
+    var popupLink = document.getElementById("popup-link");
+  var popupWindow = document.getElementById("popup-window");
+  var closeButton = document.getElementById("close-button");
+  // Show the pop-up window when the link is clicked
+  popupLink.addEventListener("click", function(event) {
+    event.preventDefault();
+    popupWindow.style.display = "block";
+  });
+  // Hide the pop-up window when the close button is clicked
+  closeButton.addEventListener("click", function() {
+    popupWindow.style.display = "none";
+  });
+  </script>
 </html>
